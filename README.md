@@ -90,6 +90,9 @@ npm install
 # CLIローカル対戦
 npm run dev
 
+# ブラウザGUI（Vite開発サーバー）
+npm run gui
+
 # テスト実行
 npm test
 
@@ -111,8 +114,12 @@ src/
 │   ├── cardRegistry.ts       # カードデータベース
 │   └── initialState.ts       # ゲーム初期化（2〜9人対応）
 ├── ui/
-│   └── cli/
-│       └── index.ts          # CLIローカル対戦UI
+│   ├── cli/
+│   │   └── index.ts          # CLIローカル対戦UI
+│   └── browser/
+│       ├── index.html        # ブラウザGUIエントリーポイント
+│       ├── main.ts           # ゲームループ・レンダリング・AI
+│       └── style.css         # ダークテーマスタイル
 ├── network/
 │   └── protocol.ts           # オンライン化対応型定義
 └── __tests__/
